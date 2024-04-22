@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* cor de fundo primario */
+body {
+  background-color: var(--cor-fundo-principal);
+}
+
+/* fontes */
+@font-face {
+  font-family: fonte-principal;
+  src: url(../assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+
+@font-face {
+  font-family: fonte-secundaria-01;
+  src: url(../assets/fonts/outfit/static/Outfit-Thin.ttf);
+}
+
+@font-face {
+  font-family: fonte-secundaria-02;
+  src: url(../assets/fonts/outfit/static/Outfit-SemiBold.ttf);
+}
+
+/* roots para cores e fontes */
+:root {
+  /* cores */
+  --cor-fundo-principal: hsl(30, 54%, 90%);
+  --cor-fundo-secundaria: hsl(0, 0%, 100%);
+  --h2: hsl(14, 45%, 36%);
+  --h3: hsl(332, 51%, 32%);
+  --cor-1: hsl(330, 100%, 98%);
+  --cor-2: hsl(30, 18%, 87%);
+  --cor-3: hsl(30, 10%, 34%);
+  --cor-4: hsl(24, 5%, 18%);
+
+  /* fontes */
+  --fonte-principal: fonte-principal;
+  --fonte-secundaria-01: fonte-secundaria-01;
+  --fonte-secundaria-02: fonte-secundaria-02;
+}
+
+/* posicionamento total */
+main {
+  width: 100%;
+  max-width: 750px;
+  margin: 30px auto;
+  background: var(--cor-fundo-secundaria);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+/* posicionamento interior */
+section,
+article,
+header {
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* decoração de palavras */
+h1 {
+  font-family: var(--fonte-principal);
+  font-weight: 400;
+  color: var(--cor-4);
+}
+
+h2{
+  font-family: var(--fonte-principal);
+  font-weight: 400;
+  color: var(--h2);
+}
+
+p,
+li {
+  font-family: var(--fonte-secundaria-01);
+  font-weight: 600;
+  color: var(--cor-4);
+}
+
+/* palavras destaque */
+.destaque, .tabela-destaque{
+  font-family: var(--fonte-secundaria-02);
+  color: var(--cor-4);
+}.tabela-destaque{color: var(--h2)}
+
+/* posicionamento de imagem */
+.image {
+  background-color: aqua;
+  width: 100%;
+  max-width: 700px;
+  height: 350px;
+  border-radius: 10px;
+  display: block;
+  background-image: url(../assets/images/image-omelette.jpeg);
+  background-position: center;
+  background-size: cover;
+  margin: auto;
+}
+
+/* posicionamento do header (h1 e p)*/
+header {
+  margin: 30px 0;
+}
+
+header p {
+  margin-top: 15px;
+}
+
+/* posicionamento do article (tabela de preparação)*/
+article {
+  background-color: var(--cor-1);
+  margin-bottom: 30px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+article h3 {
+  font-family: var(--fonte-secundaria-02);
+  font-weight: bold;
+  color: var(--h3);
+  margin-bottom: 10px;
+}
+
+article ul li{
+  list-style-type: none;
+  margin: 7px 10px;
+  display: flex;
+  align-items: center;
+}
+article ul li::before{
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: var(--h3);
+  display: block;
+  margin-right: 15px;  
+  border-radius: 50%;
+}
+
+/* posicionamento da section (1º section)*/
+section.ingredientes{
+  margin-bottom: 30px;
+}
+section.ingredientes ul li {
+  list-style-type: none;
+  margin: 7px 10px;
+  display: flex;
+  align-items: center;
+}
+
+section.ingredientes ul li::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: var(--h2);
+  display: block;
+  margin-right: 15px;
+  border-radius: 50%;
+}
+
+/* posicionamento da section (2º section)*/
+section.instrucoes {
+  margin: 30px 0;
+}
+
+section.instrucoes > ul > li {
+  list-style-type: none;
+  margin: 7px 35px;
+  position: relative;
+}
+
+section.instrucoes > ul > li::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: var(--h2);
+  border-radius: 50%;
+  position: absolute;
+  left: -25px;
+}
+
+/* posicionamento da section (3º section (com tabela))*/
+section.tabela {
+  margin: 30px 0;
+}
+
+section.tabela h2{
+  margin: 10px;
+}
+
+section.tabela p {
+  margin: 10px;
+}
+/* posicionameto tabela section 3 */
+.tabela-nutri{
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+
+.item-tab-nutri{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* extras */
+.linha{
+  width: 100%;
+  height: 1px;
+  background-color: rgb(226, 226, 226);
+}
+
+.linha-tabela{
+  width: 100%;
+  height: 1px;
+  background-color: rgb(114, 114, 114);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 10px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 780px) {
+  main {
+      margin: 0 auto;
+    }
+}
